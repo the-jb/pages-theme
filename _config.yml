@@ -6,10 +6,9 @@
 name: JB
 
 # Short bio or description (displayed in the header)
-description: THIS IS JB.
+description: "THIS IS JB."
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar:
+github_username: "the-jb"
 
 #
 # Flags below are optional

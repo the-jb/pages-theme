@@ -22,6 +22,7 @@ body {
   font-family: $defaultfont;
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.5;
   color: $darkGray;
 }
 
@@ -36,25 +37,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $defaultfont;
   color: $darkerGray;
 
-  line-height: 1.7;
+  line-height: 1.5;
   margin: 1em 0 15px;
   padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
 }
 
 h1, h2, h3 {
-  font-weight: 700;
-}
-
-h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+h4, h5, h6 {
+  font-weight: 400;
+}
+
 h1 {
-  font-size: 30px;
+  font-size: 28px;
   a {
     color: inherit;
   }
@@ -123,9 +120,20 @@ img {
   max-width: none;
 }
 
+.title {
+  color: $darkGray;
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 3px;
+}
+
 .date {
-  font-style: italic;
+  font-size: 16px;
   color: $gray;
+}
+
+.entry {
+  margin-top: 40px;
 }
 
 // Specify the color of the selection
@@ -281,9 +289,6 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
 }
 
 footer {
