@@ -2,17 +2,68 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
+{% for tag in site.tags %}
+  <div class="posts" id="posts_{{ tag[0] }}" style="display: none;">
+  {% for post in tag[1] %}
     <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+      <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      {% for post_tag in post.tags %}
+      <a class="tag" href="/#tag={{ post_tag }}">{{ post_tag }}</a>
+      {% endfor %}
+      <div class="date">
+        {{ post.date | date: "%Y.%m.%d" }}
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
+  </div>
+{% endfor %}
+
+<div class="posts" id="all_posts" style="display: none;">
+{% for post in site.posts %}
+  <article class="post">
+    <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    {% for post_tag in post.tags %}
+      <a class="tag" href="/#tag={{ post_tag }}">{{ post_tag }}</a>
+    {% endfor %}
+    <div class="date">
+      {{ post.date | date: "%Y.%m.%d" }}
+    </div>
+  </article>
+{% endfor %}
 </div>
+
+<script>
+  // Created By JB: https://the-jb.github.io
+
+  var tag = null;
+  var tag_item = null;
+  var article = null;
+  function updateTag() {
+    if (article != null) {
+      article.style.display = "none";
+      tag_item.classList.remove("selected");
+    }
+    var hash = window.location.hash.substr(1);
+    var params = hash.split('&').reduce(function (res, item) {
+      var parts = item.split('=');
+      res[parts[0]] = parts[1];
+      return res;
+    }, {});
+
+    tag = params["tag"];
+    
+    article = document.getElementById(decodeURIComponent("posts_" + tag));
+    if (article == null) {
+      article = document.getElementById("all_posts");
+    }
+    article.style.display = "block";
+
+    tag_item = document.getElementById(decodeURIComponent("tag_list_" + tag));
+    if (tag_item == null) {
+      tag_item = document.getElementById("unselect_tag");
+    }
+    tag_item.classList.add("selected");
+  }
+  updateTag();
+  window.onhashchange = updateTag;
+</script>
