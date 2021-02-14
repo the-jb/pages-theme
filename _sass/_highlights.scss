@@ -3,12 +3,21 @@
   border: 0px;
   margin: 0px;
   overflow: auto;
+  line-height: 1.1;
+}
+
+.lineno {
+  margin-right: 10px;
 }
 
 code {
   font-family: $codefont;
   font-weight: 400;
   font-size: 14px;
+  white-space: pre-wrap;
+  @include mobile {
+    font-size: 12px;
+  }
 }
 
 /* Colors customized by JB */

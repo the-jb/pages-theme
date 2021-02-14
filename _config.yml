@@ -40,8 +40,14 @@ version: v1.2.0
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  hard_wrap: true
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: ''
+    # line_numbers: true
+    default_lang: python
+    guess_lang: true
+
 
 # Set the Sass partials directory, as we're using @imports
 sass:
