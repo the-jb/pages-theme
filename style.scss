@@ -134,7 +134,6 @@ img {
 
 .entry {
   margin-top: 40px;
-  white-space: pre;
 }
 
 // Specify the color of the selection
@@ -174,37 +173,13 @@ img {
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
-}
-
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
+  text-align: center;
 }
 
 .site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
+  float: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .site-name {
@@ -213,42 +188,30 @@ img {
   cursor: pointer;
   font-family: $defaultfont;
   font-weight: 600;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 32px;
+  letter-spacing: -3px;
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 3px 0;
   color: $gray;
   font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  float: none;
+  display: block;
+  margin-top: 9px; // @TODO: Vertically middle align
   font-family: $defaultfont;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
+  font-size: 16px;
 
   a {
-    margin-left: 20px;
+    margin: 0 10px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
-    letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
       color: $blue;
     }
   }
