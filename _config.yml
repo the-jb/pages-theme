@@ -3,10 +3,11 @@
 #
 
 # Name of your site (displayed in the header)
-name: JB
+name: THEJB.AI
+author: JB
 
 # Short bio or description (displayed in the header)
-description: "THIS IS JB."
+description: "JB의 AI 논문 구현 및 리뷰"
 
 github_username: "the-jb"
 
@@ -17,8 +18,7 @@ github_username: "the-jb"
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
+# Website URL used for Sitemap.xml and your RSS feed
 url: https://the-jb.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
@@ -48,7 +48,7 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: :compressed
 
 # Use the following plug-ins
 gems:

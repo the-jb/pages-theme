@@ -186,11 +186,17 @@ img {
 .site-name {
   margin: 0;
   color: $darkGray;
-  cursor: pointer;
   font-family: $defaultfont;
   font-weight: 600;
   font-size: 32px;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
+}
+.site-name1 {
+  color: $gray;
+  font-weight: 100;
+}
+.site-name2 {
+  color: $darkGray;
 }
 
 .site-description {
