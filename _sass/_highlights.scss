@@ -21,6 +21,13 @@ code {
   @include mobile {
     font-size: 12px;
   }
+
+  &.highlighter-rouge {
+    background: $lightGray;
+    padding: 2px 6px;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
 }
 
 /* Colors customized by JB */
