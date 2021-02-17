@@ -110,7 +110,18 @@ em, i {
 strong, b {
   font-weight: bold;
 }
-
+sup, sub {
+  margin: 0px 3px 0px 1px;
+  padding: 0px 3px;
+  border-radius: 3px;
+  font-family: $codefont;
+  font-size: 10px;
+  font-weight: normal;
+  background-color: #999;
+  a {
+    color: $lightGray;
+  }
+}
 img {
   max-width: 100%;
 }
@@ -289,6 +300,40 @@ nav {
 .selected {
   background-color: $darkGray;
   color: $lightGray;
+}
+
+.footnotes {
+  border-top: 1px solid $lightGray;
+  font-size: 14px;
+  ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 10px;
+    li {
+      counter-increment: item;
+      line-height: 1.1em;
+      p {
+        display: inline-block;
+        margin: 3px 0;
+      }
+    }
+    li::before {
+      content: counter(item);
+      font-family: $codefont;
+      padding: 0px 3px;
+      margin: 0 0 2px 0;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 11px;
+      background-color: #999;
+      display: inline-block;
+      color: $lightGray;
+      vertical-align: middle;
+    }
+  }
+  a {
+    color: $gray;
+  }
 }
 
 footer {
