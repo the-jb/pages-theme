@@ -85,6 +85,7 @@ a {
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
+  font-size: 16px;
 }
 
 ul {
@@ -97,10 +98,17 @@ ol {
 
 ol ul, ul ol, ul ul, ol ol {
   margin: 0;
+  li {
+    margin: 4px 0;
+  }
 }
 
 ul ul, ol ul {
   list-style-type: circle;
+}
+
+li p {
+  margin: 5px 0;
 }
 
 em, i {
