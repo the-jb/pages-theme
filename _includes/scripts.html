@@ -1,0 +1,10 @@
+<script>
+    var atags = document.getElementsByTagName('a');
+    for(var i=0; i < atags.length; i++) {
+        var a = atags[i];
+        if (a.getAttribute('href') && (a.hostname != location.hostname && !a.href.startsWith('javascript:'))) {
+            a.target = "_blank";
+            a.rel = "noopener";
+        }
+    }
+</script>
