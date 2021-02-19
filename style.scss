@@ -320,9 +320,10 @@ nav {
     li {
       counter-increment: item;
       line-height: 1.1em;
+      margin: 3px 0;
       p {
-        display: inline-block;
-        margin: 3px 0;
+        display: inline;
+        margin: 0;
       }
     }
     li::before {
@@ -342,6 +343,10 @@ nav {
   a {
     color: $gray;
   }
+}
+
+.reversefootnote {
+  display: none;
 }
 
 footer {
