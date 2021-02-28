@@ -118,7 +118,7 @@ em, i {
 strong, b {
   font-weight: bold;
 }
-sup, sub {
+sup {
   margin: 0px 3px 0px 1px;
   padding: 0px 3px;
   border-radius: 3px;
@@ -132,6 +132,9 @@ sup, sub {
 }
 img {
   max-width: 100%;
+}
+sub {
+  font-size: 12px;
 }
 
 // Fixes images in popup boxes from Google Translate
