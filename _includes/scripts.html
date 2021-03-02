@@ -2,9 +2,13 @@
     var atags = document.getElementsByTagName('a');
     for(var i=0; i < atags.length; i++) {
         var a = atags[i];
-        if (a.getAttribute('href') && (a.hostname != location.hostname && !a.href.startsWith('javascript:'))) {
+        var h = a.getAttribute('href');
+        if (!h) continue;
+        if (a.hostname != location.hostname && !a.href.startsWith('javascript:')) {
             a.target = "_blank";
             a.rel = "noopener";
+        } else if (h.startsWith('#fn:')) {
+            a.title = document.getElementById(h.substr(1)).innerText.trim();
         }
     }
 </script>
