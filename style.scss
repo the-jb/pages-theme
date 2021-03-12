@@ -359,3 +359,11 @@ footer {
 
 @import "highlights";
 @import "svg-icons";
+
+.katex .mord.text {
+  .hangul_fallback {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+  }
+  font-size: 18px;
+}
