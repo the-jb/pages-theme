@@ -360,10 +360,38 @@ footer {
 @import "highlights";
 @import "svg-icons";
 
+// Scroll
+.katex-display {
+  max-width: 100%;
+  .katex::-webkit-scrollbar {
+    display: none;
+  }
+  .katex {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 2px;
+    padding-right: 2px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+// Text font style
 .katex .mord.text {
   .hangul_fallback {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
   }
-  font-size: 18px;
+}
+// Font size
+.katex {
+  font-size: 1.1em;
+}
+.katex-display {
+  .katex {
+    font-size: 20px;
+    .mord.text {
+      font-size: 18px;
+    }
+  }
 }
