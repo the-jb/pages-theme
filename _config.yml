@@ -37,6 +37,7 @@ permalink: /:title/
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
   hard_wrap: true
   syntax_highlighter: rouge
   syntax_highlighter_opts:
