@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font-family: $defaultfont;
   font-size: 18px;
   font-weight: 300;
@@ -116,7 +116,7 @@ em, i {
 }
 
 strong, b {
-  font-weight: bold;
+  font-weight: 500;
 }
 sup {
   margin: 0px 3px 0px 1px;
