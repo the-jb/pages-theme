@@ -137,6 +137,15 @@ sub {
   font-size: 12px;
 }
 
+td, th {
+  border: 1px solid #eee;
+  padding: 3px 10px;
+  font-size: 15px;
+}
+th {
+  font-weight: 500;
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
