@@ -6,7 +6,7 @@ layout: default
   <div class="posts" id="posts_{{ tag[0] }}" style="display: none;">
   {% for post in tag[1] %}
     <article class="post">
-      <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h1 class="title-list"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       {% for post_tag in post.tags %}
       <a class="tag" href="/#tag={{ post_tag }}">{{ post_tag }}</a>
       {% endfor %}
@@ -21,7 +21,7 @@ layout: default
 <div class="posts" id="all_posts" style="display: none;">
 {% for post in site.posts %}
   <article class="post">
-    <h1 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <h1 class="title-list"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
     {% for post_tag in post.tags %}
       <a class="tag" href="/#tag={{ post_tag }}">{{ post_tag }}</a>
     {% endfor %}

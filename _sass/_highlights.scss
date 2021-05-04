@@ -17,6 +17,7 @@ code {
   font-family: $codefont;
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 0;
   white-space: pre-wrap;
   @include mobile {
     font-size: 12px;
