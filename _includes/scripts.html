@@ -1,14 +1,26 @@
 <script>
+    // Externel link to open in new window + Add footnote description
     var atags = document.getElementsByTagName('a');
     for(var i=0; i < atags.length; i++) {
         var a = atags[i];
         var h = a.getAttribute('href');
         if (!h) continue;
+        // Externel link to open in new window
         if (a.hostname != location.hostname && !a.href.startsWith('javascript:')) {
             a.target = "_blank";
             a.rel = "noopener";
-        } else if (h.startsWith('#fn:')) {
+        }
+        // Add footnote description
+        else if (h.startsWith('#fn:')) {
             a.title = document.getElementById(h.substr(1)).innerText.trim();
         }
+    }
+    // Change images to use CDN
+    var imgtags = document.getElementsByTagName('img');
+    for(i = 0; i < imgtags.length; i++) {
+        var img = imgtags[i];
+        var src = img.getAttribute('src');
+        if (!src || !src.startsWith('.images/')) continue;
+        img.src = src.replace('.images/', "{{ site.img_baseurl }}/")
     }
 </script>
