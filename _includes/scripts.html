@@ -23,4 +23,17 @@
         if (!src || !src.startsWith('.images/')) continue;
         img.src = src.replace('.images/', "{{ site.img_baseurl }}/")
     }
+    // Insert wrapper outside table
+    var tables = document.getElementsByTagName('table');
+    for(i = 0; i < tables.length; i++) {
+        var table = tables[i];
+        var wrapper = document.createElement('div');
+        var scrollable = document.createElement('div');
+        wrapper.classList.add('scroll-wrapper');
+        scrollable.classList.add('scrollable');
+
+        table.parentNode.replaceChild(wrapper, table);
+        wrapper.appendChild(scrollable);
+        scrollable.appendChild(table);
+    }
 </script>

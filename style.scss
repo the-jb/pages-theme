@@ -377,19 +377,25 @@ footer {
 @import "svg-icons";
 
 // Scroll
-.katex-display {
+.scroll-wrapper {
   max-width: 100%;
-  .katex::-webkit-scrollbar {
-    display: none;
-  }
+}
+.scrollable {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+.katex-display {
+  @extend .scroll-wrapper;
   .katex {
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    @extend .scrollable;
     padding-left: 2px;
     padding-right: 2px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 }
 // Text font style
@@ -411,4 +417,8 @@ footer {
       font-size: 18px;
     }
   }
+}
+// Table
+thead {
+  white-space: nowrap;
 }
