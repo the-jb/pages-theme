@@ -1,4 +1,14 @@
-<a id="unselect_tag" class="tag" href="/#">전체</a>
+<a id="unselect_tag" class="tag selected" onclick="updateTag('');">전체</a>
 {% for tag in site.tags %}
-  <a id="tag_list_{{ tag[0] }}" class="tag" href="/#tag={{ tag[0] }}">{{ tag[0] }}</a>
+  <a id="tag_list_{{ tag[0] }}" class="tag" onclick="updateTag('{{ tag[0] }}');">{{ tag[0] }}</a>
 {% endfor %}
+<script>
+  window.onload = function() {
+    if (in_post) return;
+    url = new URL(window.location.href);
+    tags = url.searchParams.getAll('tag');
+    for(i = 0; i < tags.length; i++) {
+      updateTag(decodeURIComponent(tags[i]));
+    }
+  };
+</script>

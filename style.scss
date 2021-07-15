@@ -323,11 +323,17 @@ nav {
   color: $darkGray;
   background-color: $lightGray;
   white-space: nowrap;
+  &:hover, &:active {
+    color: $darkGray;
+  }
 }
 
 .selected {
   background-color: $darkGray;
   color: $lightGray;
+  &:hover, &:active {
+    color: $lightGray;
+  }
 }
 
 .footnotes {

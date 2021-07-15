@@ -8,7 +8,7 @@ layout: default
     {{ page.date | date: "%Y.%m.%d" }}
   </div>
   {% for post_tag in page.tags %}
-  <a class="tag" href="/#tag={{ post_tag }}">{{ post_tag }}</a>
+  <a class="tag" href="https://thejb.ai/?tag={{ post_tag }}">{{ post_tag }}</a>
   {% endfor %}
 
   <div class="entry">
@@ -16,3 +16,10 @@ layout: default
   </div>
 
 </article>
+
+<script>
+  in_post = true;
+  function updateTag(tag_name, disable_unset) {
+    window.location.href = "https://thejb.ai/?tag=" + encodeURIComponent(tag_name);
+  }
+</script>
