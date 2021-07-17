@@ -10,5 +10,9 @@
     for(i = 0; i < tags.length; i++) {
       updateTag(decodeURIComponent(tags[i]));
     }
+    q = window.location.href.indexOf('?');
+    if (q && q >= 0) {
+      window.history.replaceState({}, document.title, window.location.href.substr(0,q));
+    }
   };
 </script>
