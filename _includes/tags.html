@@ -2,9 +2,73 @@
 {% for tag in site.tags %}
   <a id="tag_list_{{ tag[0] }}" class="tag" onclick="updateTag('{{ tag[0] }}');">{{ tag[0] }}</a>
 {% endfor %}
+
 <script>
+  // Created By JB: https://thejb.ai
+{% if page.layout == 'list' %}
+  parse_tag_uri = true;
+
+  function updateTag(tag_name, disable_unset) {
+    tag_items = document.getElementsByClassName("tag-list")[0].children;
+    var i, j, k;
+    tag_list = [];
+
+    // Update tag buttons, get tag list
+    unselect_tag = (tag_name == '');
+    for (i = 1; i < tag_items.length; i++) {
+      var clicked_tag = (tag_items[i].id.substr(9) == tag_name);
+      for (j = 0; j < tag_items[i].classList.length; j++) {
+        if (tag_items[i].classList[j] == "selected") break;
+      }
+      if (unselect_tag) {
+        if (i > 0) {
+          tag_items[i].classList.remove("selected");
+        }
+      } else if (j == tag_items[i].classList.length) {
+        if (clicked_tag) {
+          tag_list.push(tag_items[i].id.substr(9));
+          tag_items[i].classList.add("selected");
+        }
+      } else if (clicked_tag && !disable_unset) {
+        tag_items[i].classList.remove("selected");
+      } else {
+        tag_list.push(tag_items[i].id.substr(9));
+      }
+    }
+
+    if (tag_list.length == 0) {
+      tag_items[0].classList.add("selected");
+    } else {
+      tag_items[0].classList.remove("selected");
+    }
+
+    // Update article displays
+    articles = document.getElementsByTagName("article");
+
+    for (i = 0; i < articles.length; i++) {
+      article = articles[i];
+      article_tags = article.dataset.tags.split(';');
+      for (j = 0; j < tag_list.length; j++) {
+        for (k = 0; k < article_tags.length; k++) {
+          if (article_tags[k] == tag_list[j]) break;
+        }
+        if (k == article_tags.length) break;
+      }
+      if (j < tag_list.length) {
+        article.style.display = "none";
+      } else {
+        article.style.display = "block";
+      }
+    }
+  }
+{% else %}
+  parse_tag_uri = false;
+  function updateTag(tag_name, disable_unset) {
+    window.location.href = "/?tag=" + encodeURIComponent(tag_name);
+  }
+{% endif %}
   window.onload = function() {
-    if (in_post) return;
+    if (!parse_tag_uri) return;
     url = new URL(window.location.href);
     tags = url.searchParams.getAll('tag');
     for(i = 0; i < tags.length; i++) {
