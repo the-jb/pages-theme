@@ -1,0 +1,40 @@
+header {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.site-name {
+  margin: 0;
+  font-family: $font;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+.site-name1 {
+  color: #666;
+  font-weight: 200;
+}
+
+.site-description {
+  margin: 3px 0;
+  color: $site-description-color;
+  font-size: 16px;
+}
+
+header a {
+  margin: 10px;
+  color: $font-color;
+  &:link, &:hover, &:active, &:visited {
+    color: $font-color;
+  }
+}
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+}

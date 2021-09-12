@@ -6,46 +6,31 @@
     {% include meta.html %}
     {% include katex.html %}
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.img_baseurl }}/favicon.png">
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/"><span class="site-name1">THE</span><span class="site-name2">JB.AI</span></a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="https://github.com/{{ site.github_username }}/"><i class="svg-icon github"></i></a>
-            <a href="/about"><i class="svg-icon about"></i></a>
-          </nav>
-        </header>
+    <header>
+      <div>
+        <a href="/" class="site-name"><span class="site-name1">THE</span>JB.AI</a>
+        <p class="site-description">{{ site.description }}</p>
       </div>
-
-      <div class="container">
-        <div class="tag-list">
-          {% include tags.html %}
-        </div>
+      <div>
+        <a href="https://github.com/the-jb/"><span class="github-icon"></span></a>
+        <a href="/about"><span class="about-icon"></span></a>
       </div>
-    </div>
+    </header>
 
-    <div id="main" role="main" class="container">
+    <div id="main" role="main" class="main">
+      {% include tags.html %}
       {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          <a href="javascript:window.scrollTo(0,0);"><i class="gototop-icon"></i></a>
-        </footer>
-      </div>
-    </div>
+    <footer>
+      <a href="javascript:window.scrollTo(0,0);"><span class="gototop-icon"></span></a>
+    </footer>
 
-    {% include scripts.html %}
-    {% include analytics.html %}
+  {% include scripts.html %}
   </body>
 </html>

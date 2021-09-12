@@ -1,42 +1,14 @@
-#
-# This file contains configuration flags to customize your site
-#
-
-# Name of your site (displayed in the header)
 name: THEJB.AI
 author: JB
-
-# Short bio or description (displayed in the header)
 description: "JB의 AI 논문 구현 및 리뷰"
 
-github_username: "the-jb"
+url: "https://the-jb.github.io/thejb.ai-theme"
 
-#
-# Flags below are optional
-#
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
-
-# Website URL used for Sitemap.xml and your RSS feed
-url: https://the-jb.github.io
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
 img_baseurl: "https://img.thejb.ai"
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
 
 permalink: /:title/
 
-# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
   smart_quotes: ["apos", "apos", "quot", "quot"]
   hard_wrap: true
@@ -48,14 +20,11 @@ kramdown:
     guess_lang: true
 
 
-# Set the Sass partials directory, as we're using @imports
 sass:
   style: :compressed
 
-# Use the following plug-ins
 gems:
 
-# Exclude these files from your production _site
 exclude:
   - Gemfile
   - Gemfile.lock

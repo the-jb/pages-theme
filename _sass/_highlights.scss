@@ -3,10 +3,7 @@
   border: 0px;
   margin: 0px;
   overflow: auto;
-  line-height: 1.1;
-  @include mobile {
-    line-height: 1;
-  }
+  line-height: 1; 
 }
 
 .lineno {
@@ -14,17 +11,14 @@
 }
 
 code {
-  font-family: $codefont;
+  font-family: $code-font;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0;
   white-space: pre-wrap;
-  @include mobile {
-    font-size: 12px;
-  }
 
   &.highlighter-rouge {
-    background: $lightGray;
+    background: #eee;
     padding: 2px 6px;
     border-radius: 6px;
     vertical-align: middle;

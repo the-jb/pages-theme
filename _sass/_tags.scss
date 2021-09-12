@@ -1,0 +1,34 @@
+$tag-light-color: #eee;
+$tag-dark-color: #222;
+$tag-list-border-color: #eee;
+
+.tag-list {
+  padding: 6px 0 10px;
+  margin: 0 auto 30px;
+  border: solid $tag-list-border-color;
+  border-width: 1px 0;
+  text-align: center;
+  word-wrap: normal;
+  word-break: keep-all;
+}
+
+.tag {
+  border-radius:8px;
+  border-width: 0px;
+  margin: 5px 0px;
+  padding: 1px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  white-space: nowrap;
+
+  background-color: $tag-light-color;
+  color: $tag-dark-color;
+  &:link, &:hover, &:active, &:visited { color: $tag-dark-color; }
+}
+
+.selected {
+  background-color: $tag-dark-color;
+  color: $tag-light-color;
+  &:link, &:hover, &:active, &:visited { color: $tag-light-color; }
+}

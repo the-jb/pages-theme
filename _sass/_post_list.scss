@@ -1,0 +1,14 @@
+.post-title-list {
+  color: $post-title-list-color;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.posts > .post {
+  padding-bottom: 0;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 0;
+}

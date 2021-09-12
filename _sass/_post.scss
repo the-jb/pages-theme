@@ -1,0 +1,115 @@
+/* post heads */
+.title {
+  color: $post-title-color;
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 3px;
+}
+
+.date {
+  display: block;
+  font-size: 14px;
+  color: $post-date-color;
+}
+
+/* post contents */
+.content { margin-top: 40px; }
+
+.post {
+  blockquote {
+    background: #00000006;
+    margin: 0;
+    border-left: 1px solid #0000001f;
+    padding: 0.1em 1em;
+    color: $blockquote-color;
+    font-size: 16px;
+  }
+
+  .comments { margin-top: 10px; }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0px;
+  }
+}
+
+/* footnotes */
+.footnotes {
+  border-top: 1px solid $footnote-divider-color;
+  font-size: 14px;
+  ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 10px;
+    li {
+      counter-increment: item;
+      line-height: 1.1em;
+      margin: 3px 0;
+      p {
+        display: inline;
+        margin: 0;
+      }
+    }
+    li::before {
+      content: counter(item);
+      font-family: $code-font;
+      padding: 0px 3px;
+      margin: 0 0 2px 0;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 11px;
+      background-color: $footnote-bg-color;
+      display: inline-block;
+      color: $footnote-font-color;
+      vertical-align: middle;
+    }
+  }
+  a { color: $footnote-ref-color; }
+}
+
+.reversefootnote { display: none; }
+
+/* horizontal scroller */
+.scroll-wrapper { max-width: 100%; }
+.scrollable {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {display: none;}
+}
+
+/* katex layout */
+.katex-display {
+  @extend .scroll-wrapper;
+  .katex {
+    @extend .scrollable;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+/* katex fonts */
+.katex {
+  font-size: 1.1em;
+  letter-spacing: 0;
+}
+
+.katex .mord.text .hangul_fallback {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+
+.katex-display .katex {
+  font-size: 20px;
+  .mord.text {
+    font-size: 18px;
+  }
+}

@@ -1,7 +1,9 @@
-<a id="unselect_tag" class="tag selected" onclick="updateTag('');">전체</a>
+<div class="tag-list">
+  <a id="unselect_tag" class="tag selected" onclick="updateTag('');">전체</a>
 {% for tag in site.tags %}
   <a id="tag_list_{{ tag[0] }}" class="tag" onclick="updateTag('{{ tag[0] }}');">{{ tag[0] }}</a>
 {% endfor %}
+</div>
 
 <script>
   // Created By JB: https://thejb.ai

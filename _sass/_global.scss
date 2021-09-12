@@ -1,0 +1,83 @@
+@import "icons";
+@import "fonts";
+@import "colors";
+
+html {
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: -0.05em;
+  color: $font-color;
+}
+
+/* heading */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin: .5em 0;
+  padding: 0;
+  a { color: inherit; }
+}
+
+h1, h2, h3 { font-weight: 500; }
+h4, h5, h6 { font-weight: 400; }
+
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 20px; }
+
+/* passage, link */
+a {
+  cursor: pointer;
+  text-decoration: none;
+  &:link, &:hover, &:active, &:visited { color: inherit; }
+}
+p { margin: 15px 0; }
+p a { color: $link-font-color; }
+
+/* list */
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+  li { margin: 4px 0; }
+}
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+li p { margin: 5px 0; }
+
+/* font style */
+em, i { font-style: italic; }
+strong, b { font-weight: 500; }
+
+/* sup, sub */
+sup, sub { font-size: 12px;}
+sup .footnote {
+  margin: 0px 3px 0px 2px;
+  padding: 0px 3px;
+  border-radius: 3px;
+  font-family: $code-font;
+  font-size: 9px;
+  font-weight: 400;
+  background-color: $footnote-bg-color;
+  color: $footnote-font-color;
+}
+
+/* table */
+td, th {
+  border: 1px solid #eee;
+  padding: 3px 10px;
+  font-size: 15px;
+}
+th { font-weight: 500; }
+thead { white-space: nowrap; }
+
+/* image */
+img { max-width: 100%; }
+
+/* selection */
+::-moz-selection,
+::selection {
+  color: $selection-font-color;
+  background: $selection-back-color;
+}
