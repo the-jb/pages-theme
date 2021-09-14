@@ -3,6 +3,7 @@ $tag-dark-color: #222;
 $tag-list-border-color: #eee;
 
 .tag-list {
+  max-width: fit-content;
   padding: 6px 0 10px;
   margin: 0 auto 30px;
   border: solid $tag-list-border-color;
