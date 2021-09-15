@@ -72,6 +72,20 @@
   }
   a { color: $footnote-ref-color; }
 }
+sup .footnote {
+  margin: 0px 3px 0px 2px;
+  padding: 0px 3px;
+  border-radius: 3px;
+  font-family: $code-font;
+  font-size: 9px;
+  font-weight: 400;
+  background-color: $footnote-bg-color;
+  color: $footnote-font-color;
+  a {
+    color: $footnote-font-color;
+    &:link, &:hover, &:active, &:visited { color: $footnote-font-color; }
+  }
+}
 
 .reversefootnote { display: none; }
 

@@ -55,16 +55,6 @@ strong, b { font-weight: 500; }
 
 /* sup, sub */
 sup, sub { font-size: 12px;}
-sup .footnote {
-  margin: 0px 3px 0px 2px;
-  padding: 0px 3px;
-  border-radius: 3px;
-  font-family: $code-font;
-  font-size: 9px;
-  font-weight: 400;
-  background-color: $footnote-bg-color;
-  color: $footnote-font-color;
-}
 
 /* table */
 td, th {
