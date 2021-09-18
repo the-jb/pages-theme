@@ -19,7 +19,6 @@ kramdown:
     default_lang: python
     guess_lang: true
 
-
 sass:
   style: :compressed
 
@@ -31,3 +30,15 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+giscus:
+  src: "https://giscus.app/client.js"
+  data_repo: ""
+  data_repo_id: ""
+  data_category: ""
+  data_category_id: ""
+  data_mapping: "og:title"
+  data_reactions_enabled: "0"
+  data_emit_metadata: "0"
+  data_theme: "light"
+  crossorigin: "anonymous"
