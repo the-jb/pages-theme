@@ -33,7 +33,7 @@ a {
   &:link, &:hover, &:active, &:visited { color: inherit; }
 }
 p { margin: 15px 0; }
-p a {
+p > a {
   color: $link-font-color;
   &:link, &:hover, &:active, &:visited { color: $link-font-color; }
 }
