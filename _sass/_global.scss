@@ -31,14 +31,10 @@ h5, h6 { font-size: 19px; }
 a {
   cursor: pointer;
   text-decoration: none;
-  color: inherit;
-  &:link, &:hover, &:active, &:visited { color: inherit; }
-}
-p { margin: 15px 0; }
-p > a {
   color: $link-font-color;
   &:link, &:hover, &:active, &:visited { color: $link-font-color; }
 }
+p { margin: 15px 0; }
 
 /* list */
 ol ul, ul ol, ul ul, ol ol {
