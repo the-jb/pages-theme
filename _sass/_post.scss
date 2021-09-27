@@ -34,6 +34,38 @@
   }
 }
 
+/* heading numbers */
+@mixin head-counter($n) {
+  @if $n<6 {counter-reset: hc#{$n + 1};}
+  &:before {
+    $content: "";
+    @for $i from 1 to ($n+1) { $content: #{$content}counter(hc#{$i})"."; }
+    content: $content;
+    counter-increment: hc#{$n};
+  }
+}
+
+.content {
+  counter-reset: hc1;
+  h1, h2, h3, h4, h5, h6 {
+    &:before {
+      font-size: 12px;
+      font-weight: 450;
+      vertical-align: 20%;
+      margin-right: 5px;
+      color: $heading-num-color;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  h1 { @include head-counter(1) }
+  h2 { @include head-counter(2) }
+  h3 { @include head-counter(3) }
+  h4 { @include head-counter(4) }
+  h5 { @include head-counter(5) }
+  h6 { @include head-counter(6) }
+}
+
 /* footnotes */
 .footnotes {
   border-top: 1px solid $footnote-divider-color;
