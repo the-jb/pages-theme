@@ -17,6 +17,7 @@ layout: default
 
 </article>
 
+{% if site.gisucs %}
 <script src="{{ site.giscus.src }}"
         data-repo="{{ site.giscus.data_repo }}"
         data-repo-id="{{ site.giscus.data_repo_id }}"
@@ -29,3 +30,4 @@ layout: default
         crossorigin="{{ site.giscus.crossorigin }}"
         async>
 </script>
+{% endif %}
