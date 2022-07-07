@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin: .5em 0;
   padding: 0;
-  font-size: 22px;
+  font-size: 1.3em;
   font-weight: 500;
   letter-spacing: -0.03em;
 }
@@ -28,31 +28,31 @@ a {
   color: $link-font-color;
   &:link, &:hover, &:active, &:visited { color: $link-font-color; }
 }
-p { margin: 15px 0; }
+p { margin: .8em 0; }
 
 /* list */
 ol ul, ul ol, ul ul, ol ol {
   margin: 0;
-  li { margin: 4px 0; }
+  li { margin: .2em 0; }
 }
 ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
+  margin: .8em 0;
+  padding-left: 1.5em;
 }
-li p { margin: 5px 0; }
+li p { margin: .3em 0; }
 
 /* font style */
 em, i { font-style: italic; }
 strong, b { font-weight: 600; }
 
 /* sup, sub */
-sup, sub { font-size: 12px;}
+sup, sub { font-size: .67em;}
 
 /* table */
 td, th {
-  border: 1px solid #eee;
-  padding: 3px 10px;
-  font-size: 15px;
+  border: 1pt solid #eee;
+  padding: 2pt 7pt;
+  font-size: .9em;
 }
 th { font-weight: 600; }
 thead { white-space: nowrap; }

@@ -1,16 +1,16 @@
 header {
   text-align: center;
-  margin: 30px 0;
+  margin: 22.5pt 0;
   a {
-    margin: 10px;
+    margin: .6em;
     color: $font-color;
     &:link, &:hover, &:active, &:visited { color: $font-color; }
   }
 }
 
 footer {
-  margin-top: 50px;
-  padding: 20px 0;
+  margin-top: 35pt;
+  padding: 15pt 0;
   text-align: center;
 }
 
@@ -24,8 +24,8 @@ main {
   margin: 0;
   font-family: $font;
   font-weight: 600;
-  font-size: 32px;
-  letter-spacing: -2px;
+  font-size: 24pt;
+  letter-spacing: -1.5pt;
 }
 .site-name1 {
   color: #666;
@@ -35,5 +35,5 @@ main {
 .site-description {
   margin: 3px auto 20px;
   color: $site-description-color;
-  font-size: 16px;
+  font-size: 13.5pt;
 }
