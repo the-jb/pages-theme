@@ -24,8 +24,8 @@ main {
   margin: 0;
   font-family: $font;
   font-weight: 600;
-  font-size: 24pt;
-  letter-spacing: -1.5pt;
+  font-size: 1.7em;
+  letter-spacing: -.1em;
 }
 .site-name1 {
   color: #666;
@@ -33,7 +33,7 @@ main {
 }
 
 .site-description {
-  margin: 3px auto 20px;
+  margin: 3px auto 15pt;
   color: $site-description-color;
-  font-size: 13.5pt;
+  font-size: 1em;
 }

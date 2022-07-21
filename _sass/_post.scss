@@ -2,21 +2,21 @@
 .title {
   color: $post-title-color;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 1.7em;
   margin-bottom: 3px;
 }
 
 .date {
   display: block;
-  font-size: 14px;
+  font-size: .8em;
   color: $post-date-color;
 }
 
 /* post contents */
-.content { margin-top: 40px; }
+.content { margin-top: 2em; }
 
 .post {
-  padding-bottom: 40px;
+  padding-bottom: 2em;
 
   blockquote {
     background: #00000006;
@@ -24,11 +24,11 @@
     border-left: 1px solid #0000001f;
     padding: 0.1em 1em;
     color: $blockquote-color;
-    font-size: 16px;
+    font-size: .9em;
   }
 
   .title {
-    font-size: 28px;
+    font-size: 1.5em;
     font-weight: 500;
     margin: 0px;
   }
@@ -49,7 +49,7 @@
   counter-reset: hc1;
   h1, h2, h3, h4, h5, h6 {
     &:before {
-      font-size: 12px;
+      font-size: .7em;
       font-weight: 450;
       vertical-align: 20%;
       margin-right: 5px;
@@ -69,7 +69,7 @@
 /* footnotes */
 .footnotes {
   border-top: 1px solid $footnote-divider-color;
-  font-size: 14px;
+  font-size: .8em;
   ol {
     list-style: none;
     counter-reset: item;
@@ -90,7 +90,7 @@
       margin: 0 0 2px 0;
       border-radius: 3px;
       font-weight: normal;
-      font-size: 11px;
+      font-size: .6em;
       background-color: $footnote-bg-color;
       display: inline-block;
       color: $footnote-font-color;
@@ -104,7 +104,7 @@ sup .footnote {
   padding: 0px 3px;
   border-radius: 3px;
   font-family: $code-font;
-  font-size: 9px;
+  font-size: .5em;
   font-weight: 400;
   background-color: $footnote-bg-color;
   color: $footnote-font-color;

@@ -2,9 +2,18 @@
 @import "fonts";
 @import "colors";
 
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
 html {
   font-family: $font;
   font-size: $font-size;
+  @include mobile {
+    font-size: $mobile-font-size;
+  }
   font-weight: $font-weight;
   line-height: 1.3;
   letter-spacing: 0;
