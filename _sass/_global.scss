@@ -15,7 +15,7 @@ html {
     font-size: $mobile-font-size;
   }
   font-weight: $font-weight;
-  line-height: 1.3;
+  line-height: 1.45;
   letter-spacing: 0;
   color: $font-color;
 }
@@ -37,7 +37,10 @@ a {
   color: $link-font-color;
   &:link, &:hover, &:active, &:visited { color: $link-font-color; }
 }
-p { margin: .8em 0; }
+p {
+  margin: .8em 0;
+  text-align: justify;
+}
 
 /* list */
 ol ul, ul ol, ul ul, ol ol {
