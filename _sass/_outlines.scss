@@ -2,7 +2,7 @@ header {
   text-align: center;
   margin: 22.5pt 0;
   a {
-    margin: .6em;
+    margin: .3em;
     color: $font-color;
     &:link, &:hover, &:active, &:visited { color: $font-color; }
   }
@@ -20,21 +20,17 @@ main {
   margin: 0 auto;
 }
 
-.site-name {
+.site-banner {
   margin: 0;
   font-family: $font;
-  font-weight: 600;
-  font-size: 1.7em;
-  letter-spacing: -.1em;
-}
-.site-name1 {
-  color: #666;
-  font-weight: 200;
+  font-weight: 700;
+  font-size: 1.5em;
+  letter-spacing: -.09em;
 }
 
 .site-description {
-  margin: 3px auto 15pt;
+  margin: -.8em auto 15pt;
   color: $site-description-color;
-  font-size: 1em;
+  font-size: .6em;
   text-align: center;
 }
