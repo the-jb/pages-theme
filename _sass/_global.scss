@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.03em;
 }
 
-/* passage, link */
+/* passage, link, blockquote */
 a {
   cursor: pointer;
   text-decoration: none;
@@ -39,6 +39,14 @@ a {
   &:link, &:hover, &:active, &:visited { color: $link-font-color; }
 }
 p { margin: .8em 0; }
+blockquote {
+  background: #00000006;
+  margin: 0;
+  border-left: 1px solid #0000001f;
+  padding: 0.1em 1em;
+  color: $blockquote-color;
+  font-size: .9em;
+}
 
 /* list */
 ol ul, ul ol, ul ul, ol ol {
