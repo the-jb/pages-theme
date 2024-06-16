@@ -12,18 +12,6 @@
   color: $post-date-color;
 }
 
-/* post contents */
-.content { margin-top: 2em; }
-
-.post {
-  padding-bottom: 2em;
-
-  .title {
-    font-size: 1.5em;
-    font-weight: 700;
-    margin: 0px;
-  }
-}
 
 /* heading numbers */
 @mixin head-counter($n) {
@@ -36,25 +24,36 @@
   }
 }
 
-.content {
-  counter-reset: hc1;
-  h1, h2, h3, h4, h5, h6 {
-    &:before {
-      font-size: .7em;
-      font-weight: 450;
-      vertical-align: 20%;
-      margin-right: 5px;
-      color: $heading-num-color;
-      font-variant-numeric: tabular-nums;
-    }
-  }
+/* post contents */
+.post {
+  padding-bottom: 2em;
 
-  h1 { @include head-counter(1) }
-  h2 { @include head-counter(2) }
-  h3 { @include head-counter(3) }
-  h4 { @include head-counter(4) }
-  h5 { @include head-counter(5) }
-  h6 { @include head-counter(6) }
+  .title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0px;
+  }
+  .content {
+    margin-top: 2em;
+    counter-reset: hc1;
+    h1, h2, h3, h4, h5, h6 {
+      &:before {
+        font-size: .7em;
+        font-weight: 450;
+        vertical-align: 20%;
+        margin-right: 5px;
+        color: $heading-num-color;
+        font-variant-numeric: tabular-nums;
+      }
+    }
+
+    h1 { @include head-counter(1) }
+    h2 { @include head-counter(2) }
+    h3 { @include head-counter(3) }
+    h4 { @include head-counter(4) }
+    h5 { @include head-counter(5) }
+    h6 { @include head-counter(6) }
+  }
 }
 
 /* footnotes */
