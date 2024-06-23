@@ -1,4 +1,12 @@
+article.page {
+  border-top: solid 1pt $page-top-border-color;
+  padding-top: 22.5pt;
+}
+
 .page h1.title {
   font-size: 2em;
-  margin-bottom: -.5em;
+}
+
+.page div.content {
+  margin-top: 1em;
 }
