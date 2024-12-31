@@ -18,14 +18,14 @@
 
   <body>
     <header>
-      <a href="/" class="site-banner">
+      <a href="/" class="site-banner" >
         <img src="https://img.thejb.ai/jb.png" style="width: 4em;"/>
         THE JB<span style="font-size: .8em;">.AI</span>
       </a>
       <p class="site-description">{{ site.description }}</p>
-      <a href="https://github.com/the-jb/"><span class="github-icon"></span></a>
-      <a href="/about"><span class="about-icon"></span></a>
-      <a href="https://scholar.google.com/citations?user=SQYbgngAAAAJ"><span class="scholar-icon"></span></a>
+      {% for linkicon in site.link_icons %}
+      <a href="{{ linkicon.url }}"><span class="{{ linkicon.icon }}"></span></a>
+      {% endfor %}
     </header>
 
     <main role="main">
