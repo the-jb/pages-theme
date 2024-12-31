@@ -37,6 +37,16 @@ h1.title {
   margin: 0px;
 }
 
+/* divider */
+hr {
+  height: 0.1px;
+  border: none;
+  color: #font-color;
+  background: $font-color;;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 /* passage, link, blockquote */
 a {
   cursor: pointer;
