@@ -18,6 +18,8 @@ link_icons:
   -
     icon: scholar-icon
     url: https://scholar.google.com/citations?user=SQYbgngAAAAJ
+  - icon: email-icon
+    url: mailto:jb@thejb.net
 
 permalink: /:title/
 
