@@ -39,10 +39,9 @@ h1.title {
 
 /* divider */
 hr {
-  height: 0.1px;
+  height: 1px;
   border: none;
-  color: #font-color;
-  background: $font-color;;
+  background: #999;
   margin-top: 2em;
   margin-bottom: 2em;
 }
