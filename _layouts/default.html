@@ -4,14 +4,14 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
     {% include meta.html %}
-    {% include katex.html %}
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="preconnect" href="https://img.thejb.ai" crossorigin />
+
+    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-std-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-std-dynamic-subset.min.css" />
 
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/{{ page.layout }}.css" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.img_baseurl }}/favicon.png">
   </head>
 
