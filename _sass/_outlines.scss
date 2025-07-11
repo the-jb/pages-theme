@@ -2,28 +2,20 @@ header {
   text-align: center;
   margin: 22.5pt 0;
   a {
-    margin: .3em;
     color: $font-color;
     &:link, &:hover, &:active, &:visited { color: $font-color; }
   }
 }
 
-footer {
-  margin-top: 35pt;
-  padding: 15pt 0;
-  text-align: center;
-}
-
 main {
   max-width: 660px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 1.5em;
 }
 
 .site-banner {
   margin: 0;
   display: inline-block;
-  font-family: $font;
   font-weight: 700;
   font-size: 2em;
   letter-spacing: -.09em;
@@ -34,4 +26,11 @@ main {
   color: $site-description-color;
   font-size: .6em;
   text-align: center;
+}
+
+.site-icons {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1;
+  margin: 1em 0;
 }

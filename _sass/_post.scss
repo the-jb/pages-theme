@@ -105,19 +105,3 @@ sup .footnote {
   scrollbar-width: none;
   &::-webkit-scrollbar {display: none;}
 }
-
-/* katex layout */
-.katex-display {
-  padding: 0 2pt;
-  overflow: auto hidden;
-  &::-webkit-scrollbar { display: none;}
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-/* katex fonts */
-.katex { letter-spacing: 0; }
-.katex .mord.text .hangul_fallback {
-  font-family: $font;
-  font-weight: $font-weight;
-}

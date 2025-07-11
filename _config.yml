@@ -7,19 +7,11 @@ url: "https://the-jb.github.io/pages-theme"
 img_baseurl: "https://img.thejb.ai"
 link_icons:
   -
-    icon: github-icon
+    icon: /github.svg
     url: https://github.com/the-jb
-  - 
-    icon: profile-icon
-    url: https://thejb.ai
-  - 
-    icon: blog-icon
-    url: https://blog.thejb.ai
   -
-    icon: scholar-icon
+    icon: /scholar.svg
     url: https://scholar.google.com/citations?user=SQYbgngAAAAJ
-  - icon: email-icon
-    url: mailto:jb@thejb.net
 
 permalink: /:title/
 
